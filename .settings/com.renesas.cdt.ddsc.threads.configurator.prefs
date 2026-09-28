@@ -1,0 +1,16 @@
+collapse/module.arm.ethosu.profiler.484168580=false
+collapse/module.driver.display_on_glcdc.765231961=false
+collapse/module.driver.drw.1857661508=false
+collapse/module.driver.i2c_on_iic_master.1376956986=false
+collapse/module.driver.i2c_on_iic_master.1451190869=false
+collapse/module.driver.i2c_on_iic_master.288859442=false
+collapse/module.driver.mipi_csi.726013395=false
+collapse/module.driver.ospi_mx25l_on_ospi_b.2079045268=false
+collapse/module.driver.ospi_on_ospi_b.1363510406=false
+collapse/module.driver.ospi_on_ospi_b.150959392=false
+collapse/module.driver.uart_on_sci_b_uart.389481497=false
+collapse/module.driver.vin.1333984797=false
+collapse/module.google.tflm.core.lib.303933075=false
+collapse/module.google.tflm.kernel.ethosu.598537467=false
+collapse/module.middleware.rm_ethosu.1470881294=false
+eclipse.preferences.version=1

@@ -1,0 +1,17 @@
+# Build outputs
+Debug/
+Release/
+*.elf
+*.bin
+*.hex
+*.map
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Renesas Smart Configurator generated cache
+script/.cache/
