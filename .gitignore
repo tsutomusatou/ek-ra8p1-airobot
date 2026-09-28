@@ -1,6 +1,6 @@
 # Build outputs
 Debug/
-Release/
+Release_OK/
 *.elf
 *.bin
 *.hex
