@@ -355,7 +355,7 @@ void control_task(INT stacd, void *exinf)
 //            APP_PRINT("[CTL] control << sensor: %s\n", sensor_msg->text);
 
 #if ENABLE_ROS_HOST
-            strncpy(m.text, sensor_msg->text, sizeof(m.text)-1);
+            snprintf(m.text, sizeof(m.text), "%d", sensor_msg->tof_value);
             /* control_task -> uros_task */
             APP_PRINT("[CTL] control >> uros\n");
             tk_snd_mbx(MBX_CONTROL_TO_ROS, (T_MSG*)&m);

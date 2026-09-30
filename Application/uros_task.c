@@ -194,16 +194,16 @@ void uros_task(INT stacd, void *exinf)
         T_SENSOR_MSG *sensor_msg;
         ER ercd = tk_rcv_mbx(MBX_CONTROL_TO_ROS, (T_MSG**)&sensor_msg, TMO_POL);
         if (ercd == E_OK) {
-            SEGGER_RTT_printf(0, "uros << control : %s\n", sensor_msg->text);
-            strncpy(pub_msg.data.data, sensor_msg->text, pub_msg.data.capacity - 1);
+            APP_PRINT("uros << control : %d\n", sensor_msg->tof_value);
+            snprintf(pub_msg.data.data, pub_msg.data.capacity, "%d", sensor_msg->tof_value);
             pub_msg.data.size = strlen(pub_msg.data.data);
 
-            SEGGER_RTT_printf(0, "ros >> Host : %s\n", pub_msg.data.data);
+            APP_PRINT("ros >> Host : %s\n", pub_msg.data.data);
             rc = rcl_publish(&publisher, &pub_msg, NULL);
             if (rc != RCL_RET_OK) {
-                SEGGER_RTT_printf(0,"[ros] publish failed: %d\n", rc);
+                APP_PRINT("[ros] publish failed: %d\n", rc);
             } else {
-                SEGGER_RTT_printf(0, "[Published]\n");
+                APP_PRINT("[Published]\n");
             }
         }
 #else
